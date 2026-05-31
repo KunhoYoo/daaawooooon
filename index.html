@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>6/3(수) 여의도 저녁 식당 후보</title>
+  <meta name="description" content="6/3(수) 여의도 저녁 식당 후보 리스트입니다." />
+  <meta property="og:title" content="6/3(수) 여의도 저녁 식당 후보" />
+  <meta property="og:description" content="편하신 곳 하나 선택해주세요." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f7f1ea" />
+
+  <style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+    :root {
+      --bg: #f7f1ea;
+      --paper: #fffaf5;
+      --card: rgba(255, 255, 255, 0.82);
+      --ink: #1d1d1f;
+      --muted: #77716b;
+      --subtle: #a19890;
+      --line: rgba(35, 31, 28, 0.09);
+      --shadow: 0 22px 70px rgba(57, 45, 36, 0.14);
+      --shadow-soft: 0 12px 34px rgba(57, 45, 36, 0.10);
+      --accent: #ff7f91;
+      --accent-dark: #ec5e73;
+      --brown: #6f5847;
+      --cream: #fff7ed;
+      --green: #4f8f73;
+      --blue: #5379c7;
+      --radius-xl: 30px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 127, 145, 0.15), transparent 28%),
+        radial-gradient(circle at 90% 8%, rgba(111, 88, 71, 0.12), transparent 26%),
+        linear-gradient(180deg, #f8f1ea 0%, #f4eee8 55%, #efe8e0 100%);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(100%, 1040px);
+      margin: 0 auto;
+      padding: 18px 16px 108px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      margin: 0 -16px;
+      padding: 10px 16px 8px;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 241, 234, 0.72);
+      border-bottom: 1px solid rgba(35, 31, 28, 0.04);
+    }
+
+    .topbar-inner {
+      width: min(100%, 1040px);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 15px;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at 68% 28%, #ffd3db 0 16%, transparent 17%),
+        linear-gradient(135deg, #ff8798, #f0b780);
+      box-shadow: 0 8px 20px rgba(255, 127, 145, 0.22);
+    }
+
+    .date-pill {
+      display: inline-flex;
+      align-items: center;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      color: #5e554d;
+      font-size: 12px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      margin-top: 14px;
+      padding: 28px 20px 22px;
+      border-radius: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.74);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 250, 245, 0.68));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      right: -90px;
+      top: -100px;
+      border-radius: 999px;
+      background: rgba(255, 127, 145, 0.18);
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      left: -130px;
+      bottom: -120px;
+      border-radius: 999px;
+      background: rgba(111, 88, 71, 0.10);
+      z-index: -1;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255, 127, 145, 0.10);
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 {
+      margin: 15px 0 10px;
+      font-size: clamp(30px, 8.4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.075em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #5f5852;
+      font-size: 15px;
+      line-height: 1.65;
+      letter-spacing: -0.035em;
+      font-weight: 620;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .meta-card {
+      min-height: 78px;
+      padding: 13px 11px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: -0.05em;
+    }
+
+    .meta-card span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 720;
+    }
+
+    .sticker {
+      position: absolute;
+      z-index: 4;
+      pointer-events: none;
+      filter: drop-shadow(0 16px 20px rgba(54, 38, 34, 0.16));
+      transform-origin: center;
+    }
+
+    .sticker img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 3px solid rgba(255, 255, 255, 0.82);
+    }
+
+    .sticker-hero {
+      width: 25px;
+      right: 14px;
+      bottom: 16px;
+      transform: rotate(5deg);
+      opacity: 0.96;
+    }
+
+    .section-head {
+      margin: 26px 2px 13px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.06em;
+    }
+
+    .section-head span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 2px 1px 13px;
+      scrollbar-width: none;
+    }
+
+    .filter-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chip {
+      appearance: none;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.68);
+      color: #5c554d;
+      border-radius: 999px;
+      height: 38px;
+      padding: 0 14px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 850;
+      cursor: pointer;
+      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .chip.active {
+      color: #fff;
+      background: #2a2521;
+      box-shadow: 0 11px 24px rgba(42, 37, 33, 0.18);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .restaurant-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      background: var(--card);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(18px);
+      transform: translateY(10px);
+      opacity: 0;
+      animation: cardUp 0.52s cubic-bezier(.2,.8,.2,1) forwards;
+    }
+
+    .restaurant-card:nth-child(1) { animation-delay: 0.04s; }
+    .restaurant-card:nth-child(2) { animation-delay: 0.10s; }
+    .restaurant-card:nth-child(3) { animation-delay: 0.16s; }
+    .restaurant-card:nth-child(4) { animation-delay: 0.22s; }
+
+    @keyframes cardUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .restaurant-card.hidden {
+      display: none;
+    }
+
+    .restaurant-card.selected {
+      border-color: rgba(236, 94, 115, 0.80);
+      box-shadow: 0 18px 54px rgba(236, 94, 115, 0.18);
+    }
+
+    .restaurant-card.selected .select-btn {
+      background: #2a2521;
+    }
+
+    .thumb-wrap {
+      position: relative;
+      height: 205px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #e7d9ce, #fff7ed);
+    }
+
+    .thumb-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.02) 20%, rgba(0,0,0,0.58) 100%);
+      z-index: 1;
+    }
+
+    .thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+      transition: transform 0.45s ease;
+    }
+
+    .restaurant-card:hover .thumb {
+      transform: scale(1.045);
+    }
+
+    .thumb-fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 18px;
+      text-align: center;
+      color: rgba(42, 37, 33, 0.58);
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background:
+        radial-gradient(circle at 70% 24%, rgba(255, 127, 145, 0.18), transparent 28%),
+        linear-gradient(135deg, #eaded4, #fff7ed);
+    }
+
+    .thumb-badges {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 0 11px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(12px);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .card-title-overlay {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 15px;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .card-title-overlay h3 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1;
+      letter-spacing: -0.07em;
+      text-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
+    }
+
+    .card-title-overlay p {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 13px;
+      line-height: 1.42;
+      font-weight: 720;
+      letter-spacing: -0.02em;
+    }
+
+    .card-body {
+      padding: 16px;
+    }
+
+    .summary {
+      margin: 0;
+      color: #514a44;
+      font-size: 14px;
+      line-height: 1.66;
+      letter-spacing: -0.03em;
+      font-weight: 620;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 13px 0 15px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(42, 37, 33, 0.055);
+      color: #5d554f;
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 13px;
+    }
+
+    .info-box {
+      min-height: 65px;
+      padding: 11px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .info-box small {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .info-box b {
+      display: block;
+      color: #302b27;
+      font-size: 13px;
+      line-height: 1.35;
+      letter-spacing: -0.035em;
+    }
+
+    .action-row {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr 0.85fr;
+      gap: 8px;
+    }
+
+    .btn {
+      min-height: 46px;
+      border-radius: 17px;
+      border: 0;
+      appearance: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+      user-select: none;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .select-btn {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), #f0a36f);
+      box-shadow: 0 12px 28px rgba(236, 94, 115, 0.18);
+    }
+
+    .link-btn {
+      color: #312b27;
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--line);
+    }
+
+    .floating-sticker-left {
+      width: 20px;
+      left: -2px;
+      top: 55%;
+      transform: rotate(-8deg);
+      opacity: 0.94;
+    }
+
+    .floating-sticker-right {
+      width: 21px;
+      right: -2px;
+      top: 31%;
+      transform: rotate(9deg);
+      opacity: 0.94;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      left: 50%;
+      bottom: calc(12px + var(--safe-bottom));
+      z-index: 50;
+      width: min(calc(100% - 24px), 640px);
+      transform: translateX(-50%);
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.74);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 20px 68px rgba(57, 45, 36, 0.22);
+      backdrop-filter: blur(22px);
+      padding: 11px;
+    }
+
+    .bottom-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .selected-copy strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: -0.04em;
+    }
+
+    .selected-copy span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 720;
+    }
+
+    .share-btn {
+      min-height: 48px;
+      padding: 0 16px;
+      border: 0;
+      border-radius: 18px;
+      color: #fff;
+      background: #2a2521;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 950;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .share-btn:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      place-items: end center;
+      padding: 18px;
+      background: rgba(42, 37, 33, 0.35);
+    }
+
+    .modal.open {
+      display: grid;
+    }
+
+    .modal-panel {
+      width: min(100%, 560px);
+      border-radius: 30px;
+      background: #fffaf5;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+      padding: 18px;
+      animation: modalUp 0.22s ease-out both;
+    }
+
+    @keyframes modalUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-panel h2 {
+      margin: 0 0 8px;
+      font-size: 23px;
+      letter-spacing: -0.06em;
+    }
+
+    .modal-panel p {
+      margin: 0 0 13px;
+      color: #6a625b;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 620;
+      letter-spacing: -0.025em;
+    }
+
+    .message-box {
+      width: 100%;
+      min-height: 118px;
+      resize: none;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 13px;
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 1.55;
+      outline: none;
+    }
+
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .modal-actions button {
+      min-height: 48px;
+      border-radius: 16px;
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 950;
+    }
+
+    .copy-btn {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), #f0a36f);
+    }
+
+    .close-btn {
+      color: #312b27;
+      background: rgba(42, 37, 33, 0.07);
+    }
+
+    .toast {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      z-index: 100;
+      transform: translate(-50%, -12px);
+      opacity: 0;
+      pointer-events: none;
+      padding: 11px 14px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(42, 37, 33, 0.88);
+      box-shadow: 0 14px 34px rgba(42, 37, 33, 0.24);
+      font-size: 13px;
+      font-weight: 850;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (min-width: 720px) {
+      .shell {
+        padding-top: 24px;
+      }
+
+      .topbar {
+        border-radius: 0 0 28px 28px;
+      }
+
+      .hero {
+        padding: 36px;
+      }
+
+      .hero-meta {
+        width: min(100%, 620px);
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .thumb-wrap {
+        height: 225px;
+      }
+
+      .modal {
+        place-items: center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        min-height: 280px;
+      }
+
+      .sticker-hero {
+        width: 38px;
+        right: 36px;
+        bottom: 34px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-meta,
+      .quick-info,
+      .action-row,
+      .bottom-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .share-btn {
+        width: 100%;
+      }
+
+      .thumb-wrap {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Yeouido Dinner List</span>
+      </div>
+      <div class="date-pill">6/3(수) 저녁</div>
+    </div>
+  </div>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-label">식당 후보 4곳</div>
+      <h1>여의도 저녁<br />식당 후보입니다</h1>
+      <p>
+        6/3(수) 저녁에 가기 괜찮아 보이는 곳들로 추려봤습니다.<br />
+        편하게 보시고, 가장 괜찮은 곳 하나 선택해주세요.
+      </p>
+
+      <div class="hero-meta">
+        <div class="meta-card">
+          <strong>4곳</strong>
+          <span>스페인 · 이탈리안 · 일식 · 한식</span>
+        </div>
+        <div class="meta-card">
+          <strong>여의도</strong>
+          <span>이동 부담 적은 후보</span>
+        </div>
+        <div class="meta-card">
+          <strong>선택형</strong>
+          <span>지도와 블로그 바로 확인</span>
+        </div>
+      </div>
+
+      <span class="sticker sticker-hero">
+        <img src="https://yt3.googleusercontent.com/syPsF-rF-I7-uoAXPj1fW6F1epRLT--FBux4nDBzq6lSLwx3eKF2R5EaasbhQfKhGLgTYCU8UA=s900-c-k-c0x00ffffff-no-rj" alt="잔망루피 스티커" onerror="this.closest('.sticker').remove();" />
+      </span>
+    </section>
+
+    <section id="restaurants">
+      <div class="section-head">
+        <h2>후보 카드</h2>
+        <span>사진 · 지도 · 블로그</span>
+      </div>
+
+      <div class="filter-row" aria-label="필터">
+        <button class="chip active" type="button" data-filter="all">전체</button>
+        <button class="chip" type="button" data-filter="western">양식</button>
+        <button class="chip" type="button" data-filter="japanese">일식</button>
+        <button class="chip" type="button" data-filter="korean">한식</button>
+        <button class="chip" type="button" data-filter="quiet">차분한 곳</button>
+      </div>
+
+      <div class="grid">
+        <article class="restaurant-card" data-id="traga" data-filter-tags="western lively">
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241209_277%2F17337067257515RDwk_JPEG%2F%25C6%25AE%25B6%25F3%25B0%25A1_%25C7%25C1%25B8%25AE%25B9%25CC%25BE%25F6%25BC%25BC%25C6%25AE_%25287%2529.jpg" alt="트라가 대표 사진" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="thumb-fallback">images/traga.jpg<br />네이버 지도 대표사진을 저장해 넣으면 표시됩니다.</div>
+            <div class="thumb-badges">
+              <span class="badge">스페인</span>
+              <span class="badge">캐주얼</span>
+            </div>
+            <div class="card-title-overlay">
+              <h3>트라가</h3>
+              <p>빠에야, 감바스 등 나눠 먹기 좋은 스페니시</p>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <p class="summary">
+              너무 격식 있지 않고 편한 분위기. 메뉴를 같이 고르기 좋아서 첫 만남의 어색함을 줄이기 괜찮은 후보입니다.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">나눠먹기 좋음</span>
+              <span class="tag">밝은 분위기</span>
+              <span class="tag">캐주얼</span>
+            </div>
+
+            <div class="quick-info">
+              <div class="info-box">
+                <small>추천 포인트</small>
+                <b>대화 시작이 쉬운 메뉴 구성</b>
+              </div>
+              <div class="info-box">
+                <small>분위기</small>
+                <b>활기 있음</b>
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button class="btn select-btn" type="button" data-pick="traga">선택</button>
+              <a class="btn link-btn" href="https://naver.me/FUhsa2LN" target="_blank" rel="noopener">지도</a>
+              <a class="btn link-btn" href="https://blog.naver.com/cozyyy__/224139931005" target="_blank" rel="noopener">블로그</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card" data-id="bonvoyage" data-filter-tags="western quiet">
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fblogfiles.pstatic.net%2FMjAyNjAyMjJfMTk2%2FMDAxNzcxNzM2MTg2NTI2.MyTb8SvhIRSbCujn3xC-3Q0gZNWYhaAZ2SNiZVSrf-Yg.jZJ1L9uZmYmDOELUBDfYh6CpRuFwwjSvpy08qjXVdtEg.JPEG%2F900%EF%BC%BF20260214%EF%BC%BF191743.jpg%2F900x675" alt="본보야지 대표 사진" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="thumb-fallback">images/bonvoyage.jpg<br />네이버 지도 대표사진을 저장해 넣으면 표시됩니다.</div>
+            <div class="thumb-badges">
+              <span class="badge">이탈리아</span>
+              <span class="badge">무난함</span>
+            </div>
+            <div class="card-title-overlay">
+              <h3>본보야지</h3>
+              <p>파스타와 스테이크 중심의 안정적인 선택지</p>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <p class="summary">
+              호불호가 적은 이탈리안 후보. 조용하고 깔끔한 식사 쪽으로 가고 싶을 때 안정적인 선택입니다.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">깔끔함</span>
+              <span class="tag">호불호 적음</span>
+              <span class="tag">차분함</span>
+            </div>
+
+            <div class="quick-info">
+              <div class="info-box">
+                <small>추천 포인트</small>
+                <b>가장 무난한 소개팅 선택지</b>
+              </div>
+              <div class="info-box">
+                <small>분위기</small>
+                <b>차분 · 안정적</b>
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button class="btn select-btn" type="button" data-pick="bonvoyage">선택</button>
+              <a class="btn link-btn" href="https://naver.me/GWe2Udts" target="_blank" rel="noopener">지도</a>
+              <a class="btn link-btn" href="https://blog.naver.com/jju9922050/224234173062" target="_blank" rel="noopener">블로그</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card" data-id="omyo" data-filter-tags="japanese quiet">
+          <span class="sticker floating-sticker-left">
+            <img src="https://yt3.googleusercontent.com/syPsF-rF-I7-uoAXPj1fW6F1epRLT--FBux4nDBzq6lSLwx3eKF2R5EaasbhQfKhGLgTYCU8UA=s900-c-k-c0x00ffffff-no-rj" alt="잔망루피 스티커" onerror="this.closest('.sticker').remove();" />
+          </span>
+
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNjA1MjFfMjk3%2FMDAxNzc5MzYxMzM0NzE3.0uBX50J3ogx08kdpDC_wHHqQYIphbZkUt2kGbFgOWlsg.K60j2vwEF6TTzRSgMk5DYP1usc-lw7YgZVILs3OFffwg.JPEG%2F73120ED7-5A8C-462B-82FE-BF146425FD7C.jpeg%3Ftype%3Dw1500_60_sharpen" alt="오묘 대표 사진" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="thumb-fallback">images/omyo.jpg<br />네이버 지도 대표사진을 저장해 넣으면 표시됩니다.</div>
+            <div class="thumb-badges">
+              <span class="badge">일식</span>
+              <span class="badge">차분함</span>
+            </div>
+            <div class="card-title-overlay">
+              <h3>오묘</h3>
+              <p>조용하게 이야기하기 좋은 일식 다이닝 후보</p>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <p class="summary">
+              너무 시끄러운 분위기보다 차분한 식사를 원할 때 적합합니다. 일식이라 메뉴가 깔끔하고 부담이 덜합니다.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">일식</span>
+              <span class="tag">대화하기 좋음</span>
+              <span class="tag">단정함</span>
+            </div>
+
+            <div class="quick-info">
+              <div class="info-box">
+                <small>추천 포인트</small>
+                <b>대화 중심의 저녁에 적합</b>
+              </div>
+              <div class="info-box">
+                <small>분위기</small>
+                <b>조용 · 단정</b>
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button class="btn select-btn" type="button" data-pick="omyo">선택</button>
+              <a class="btn link-btn" href="https://naver.me/xLWpFvSo" target="_blank" rel="noopener">지도</a>
+              <a class="btn link-btn" href="https://blog.naver.com/meok9meok9/224239549276" target="_blank" rel="noopener">블로그</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card" data-id="yido" data-filter-tags="korean quiet">
+          <span class="sticker floating-sticker-right">
+            <img src="https://yt3.googleusercontent.com/syPsF-rF-I7-uoAXPj1fW6F1epRLT--FBux4nDBzq6lSLwx3eKF2R5EaasbhQfKhGLgTYCU8UA=s900-c-k-c0x00ffffff-no-rj" alt="잔망루피 스티커" onerror="this.closest('.sticker').remove();" />
+          </span>
+
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNjA1MzBfMTky%2FMDAxNzgwMTQ0MzEwMjI4.e5Zq1eMWl6ql3BJBEB19GGyjHk9o5bCfZvk8aIjEqDUg.008o8KKOavTidl9wo_C0j7ra6XrkCLHBg1CoMe84JeIg.JPEG%2F1000020959.jpg%3Ftype%3Dw1500_60_sharpen" alt="이도 대표 사진" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="thumb-fallback">images/yido.jpg<br />네이버 지도 대표사진을 저장해 넣으면 표시됩니다.</div>
+            <div class="thumb-badges">
+              <span class="badge">한식</span>
+              <span class="badge">모던</span>
+            </div>
+            <div class="card-title-overlay">
+              <h3>이도</h3>
+              <p>전통 한식보다 가볍고 세련된 모던 한식</p>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <p class="summary">
+              한식이지만 너무 무겁지 않은 다이닝 느낌입니다. 메뉴와 분위기 모두 20~30대 저녁 자리로 맞추기 좋습니다.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">모던 한식</span>
+              <span class="tag">세련됨</span>
+              <span class="tag">무겁지 않음</span>
+            </div>
+
+            <div class="quick-info">
+              <div class="info-box">
+                <small>추천 포인트</small>
+                <b>한식 선호 시 가장 적합</b>
+              </div>
+              <div class="info-box">
+                <small>분위기</small>
+                <b>편안 · 세련</b>
+              </div>
+            </div>
+
+            <div class="action-row">
+              <button class="btn select-btn" type="button" data-pick="yido">선택</button>
+              <a class="btn link-btn" href="https://naver.me/GPdQoOhT" target="_blank" rel="noopener">지도</a>
+              <a class="btn link-btn" href="https://blog.naver.com/one1han/224298438908" target="_blank" rel="noopener">블로그</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="bottom-bar" aria-label="선택 결과">
+    <div class="bottom-inner">
+      <div class="selected-copy">
+        <strong id="selectedTitle">선택 전입니다</strong>
+        <span id="selectedDesc">괜찮은 식당을 하나 선택해주세요.</span>
+      </div>
+      <button class="share-btn" id="shareBtn" type="button" disabled>선택 문구</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h2 id="modalTitle">선택 문구</h2>
+      <p>아래 문구를 복사해서 보내면 됩니다.</p>
+      <textarea class="message-box" id="messageBox" readonly></textarea>
+      <div class="modal-actions">
+        <button class="copy-btn" id="copyBtn" type="button">복사</button>
+        <button class="close-btn" id="closeBtn" type="button">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">복사했습니다</div>
+
+  <script>
+    const RESTAURANTS = {
+      traga: {
+        name: "트라가",
+        category: "스페인",
+        tone: "밝고 캐주얼한 분위기",
+        map: "https://naver.me/FUhsa2LN",
+        blog: "https://blog.naver.com/cozyyy__/224139931005"
+      },
+      bonvoyage: {
+        name: "본보야지",
+        category: "이탈리아",
+        tone: "깔끔하고 무난한 분위기",
+        map: "https://naver.me/GWe2Udts",
+        blog: "https://blog.naver.com/jju9922050/224234173062"
+      },
+      omyo: {
+        name: "오묘",
+        category: "일식",
+        tone: "조용하고 차분한 분위기",
+        map: "https://naver.me/xLWpFvSo",
+        blog: "https://blog.naver.com/meok9meok9/224239549276"
+      },
+      yido: {
+        name: "이도",
+        category: "한식",
+        tone: "세련된 모던 한식 분위기",
+        map: "https://naver.me/GPdQoOhT",
+        blog: "https://blog.naver.com/one1han/224298438908"
+      }
+    };
+
+    const cards = Array.from(document.querySelectorAll(".restaurant-card"));
+    const pickButtons = Array.from(document.querySelectorAll("[data-pick]"));
+    const chips = Array.from(document.querySelectorAll("[data-filter]"));
+    const selectedTitle = document.getElementById("selectedTitle");
+    const selectedDesc = document.getElementById("selectedDesc");
+    const shareBtn = document.getElementById("shareBtn");
+    const modal = document.getElementById("modal");
+    const messageBox = document.getElementById("messageBox");
+    const copyBtn = document.getElementById("copyBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const toast = document.getElementById("toast");
+
+    let selectedId = localStorage.getItem("selectedRestaurant") || "";
+
+    function buildMessage(id) {
+      const item = RESTAURANTS[id];
+      if (!item) return "";
+
+      return `6/3(수) 여의도 저녁 식당 후보 중에는 "${item.name}"이 괜찮을 것 같아요.\n\n` +
+        `- 종류: ${item.category}\n` +
+        `- 분위기: ${item.tone}\n\n` +
+        `지도: ${item.map}\n` +
+        `블로그: ${item.blog}`;
+    }
+
+    function showToast(text) {
+      toast.textContent = text;
+      toast.classList.add("show");
+      window.setTimeout(() => toast.classList.remove("show"), 1500);
+    }
+
+    function selectRestaurant(id) {
+      const item = RESTAURANTS[id];
+      if (!item) return;
+
+      selectedId = id;
+      localStorage.setItem("selectedRestaurant", id);
+
+      cards.forEach(card => {
+        card.classList.toggle("selected", card.dataset.id === id);
+      });
+
+      selectedTitle.textContent = `${item.name} 선택됨`;
+      selectedDesc.textContent = `${item.category} · ${item.tone}`;
+      shareBtn.disabled = false;
+
+      showToast(`${item.name} 선택`);
+    }
+
+    function openModal() {
+      if (!selectedId) {
+        showToast("식당을 먼저 선택해주세요");
+        return;
+      }
+
+      const message = buildMessage(selectedId);
+      messageBox.value = message;
+
+      if (navigator.share) {
+        navigator.share({
+          title: "6/3(수) 여의도 저녁 식당 후보",
+          text: message
+        }).catch(() => {
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      } else {
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+      }
+    }
+
+    async function copyMessage() {
+      const message = messageBox.value || buildMessage(selectedId);
+
+      try {
+        await navigator.clipboard.writeText(message);
+        showToast("선택 문구를 복사했습니다");
+      } catch (error) {
+        messageBox.focus();
+        messageBox.select();
+        document.execCommand("copy");
+        showToast("선택 문구를 복사했습니다");
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    function applyFilter(filter) {
+      chips.forEach(chip => chip.classList.toggle("active", chip.dataset.filter === filter));
+
+      cards.forEach(card => {
+        const tags = card.dataset.filterTags || "";
+        const visible = filter === "all" || tags.includes(filter);
+        card.classList.toggle("hidden", !visible);
+      });
+    }
+
+    pickButtons.forEach(button => {
+      button.addEventListener("click", () => selectRestaurant(button.dataset.pick));
+    });
+
+    chips.forEach(chip => {
+      chip.addEventListener("click", () => applyFilter(chip.dataset.filter));
+    });
+
+    shareBtn.addEventListener("click", openModal);
+    copyBtn.addEventListener("click", copyMessage);
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", event => {
+      if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeModal();
+    });
+
+    if (selectedId && RESTAURANTS[selectedId]) {
+      selectRestaurant(selectedId);
+    }
+  </script>
+</body>
+</html>
